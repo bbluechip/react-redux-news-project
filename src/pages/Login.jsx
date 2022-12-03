@@ -1,7 +1,6 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
@@ -80,15 +79,6 @@ export default function Login() {
           </Button>
         </Box>
       </Box>
-
-      <Typography variant="body2" color="text.secondary" align="center">
-        {"Copyright © "}
-        <Link color="inherit" href="https://www.clarusway.com/">
-          Clarusway
-        </Link>{" "}
-        {new Date().getFullYear()}
-        {"."}
-      </Typography>
     </Container>
   );
 }

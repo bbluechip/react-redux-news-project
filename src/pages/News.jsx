@@ -22,6 +22,7 @@ const News = () => {
     return () => {
       dispatch(clearNewsList());
     };
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -33,7 +34,7 @@ const News = () => {
       )}
       {loading && (
         <Box display="flex" alignItems="center" justifyContent="center">
-          <img src={loadinGif} />
+          <img src={loadinGif} alt="loading" />
         </Box>
       )}
       {!loading && (
@@ -45,11 +46,15 @@ const News = () => {
           flexWrap="wrap"
         >
           {newsList?.map((item, index) => (
-            <Card sx={{ maxWidth: 345, m: 5, maxHeight: 600 }} key={index}>
+            <Card
+              sx={{ maxWidth: 345, m: 5, maxHeight: 600, overflow: "auto" }}
+              key={index}
+              raised="true"
+            >
               <CardMedia
                 component="img"
                 height="250"
-                image={item?.urlToImage}
+                image={item?.image}
                 alt="img"
               />
               <CardContent>
@@ -61,8 +66,14 @@ const News = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small" href={item?.url} target="_blank">
+                <Button
+                  size="large"
+                  href={item?.url}
+                  target="_blank"
+                  fullWidth="true"
+                  variant="contained"
+                  sx={{ mb: 2 }}
+                >
                   Detail
                 </Button>
               </CardActions>

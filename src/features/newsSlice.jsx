@@ -19,11 +19,13 @@ export const getNews = createAsyncThunk(
   "getNews", //! action types
 
   async (thunkAPI, { rejectWithValue }) => {
-    //! asyn callback function
-    const API_KEY = "02d142c50d8b4247b974b2532343517";
-    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
+    //! async callback function
+    const API_KEY = "b38ec39df1bcb18ee798405473bd1261";
+    const endpoint = "top-headlines";
+    const url = `https://gnews.io/api/v4/${endpoint}?token=${API_KEY}&lang=en&country=us`;
     try {
       const { data } = await axios(url);
+      console.log(data);
       return data.articles;
     } catch (error) {
       console.log(error);
