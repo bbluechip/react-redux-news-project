@@ -13,4 +13,4 @@
 👉 Github & Git commands (push, pull, commit, add etc.)
 
 ## Description
-Website about news, I fetch api via axios, redux-thunk (middleware) 
+Website about news, I fetch api via axios, handle via redux-thunk (middleware). Made this website for, training react middlewares. 
