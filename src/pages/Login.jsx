@@ -39,8 +39,8 @@ export default function Login() {
           src="https://cdn.pixabay.com/photo/2017/03/21/02/00/user-2160923_960_720.png"
           sx={{ width: 100, height: 100 }}
         />
-        <Typography component="h1" variant="h5">
-          Sign in
+        <Typography component="h1" variant="h5" color="primary" m={2}>
+          BBLUECHIP NEWS
         </Typography>
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
           <TextField
@@ -72,7 +72,7 @@ export default function Login() {
             type="submit"
             fullWidth
             variant="contained"
-            color="secondary"
+            color="primary"
             sx={{ mt: 3, mb: 2 }}
           >
             Sign In
